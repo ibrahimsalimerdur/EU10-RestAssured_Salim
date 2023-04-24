@@ -12,12 +12,15 @@ import static io.restassured.RestAssured.*;
 public class BookitParametrized {
 
 
+
         public static List<Map<String,String>> getExcelData(){
 
             ExcelUtil bookitFile = new ExcelUtil("src/test/resources/BookItQa3.xlsx","QA3");
 
             return bookitFile.getDataList();
         }
+
+
 
         @ParameterizedTest
         @MethodSource("getExcelData")
@@ -38,5 +41,7 @@ public class BookitParametrized {
 
 
         }
+
+
 
 }
