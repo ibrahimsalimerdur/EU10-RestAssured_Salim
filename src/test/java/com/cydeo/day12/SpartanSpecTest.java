@@ -47,7 +47,6 @@ public class SpartanSpecTest extends SpartanNewBase {
                 .get("/spartans/{id}")
         .then()
                 .spec(responseSpec);
-
     }
 
     @Test
@@ -62,7 +61,7 @@ public class SpartanSpecTest extends SpartanNewBase {
                     .get("/spartans/search")
             .then()
                     .spec(responseSpec)
-                    .body("numberOfElements",is(6));
+                    .body("numberOfElements",is(14));
 
 
 
